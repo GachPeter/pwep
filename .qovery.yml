@@ -1,0 +1,15 @@
+---
+application:
+  name: "pwep"
+  project: "Pwep"
+  organization: "QoveryCommunity"
+databases:
+- type: "MONGODB"
+  name: "pwep"
+  version: "3.6"
+routers:
+- name: "main-pwep"
+  routes:
+  - application_name: "pwep"
+    paths:
+    - "/*"
