@@ -34,10 +34,10 @@ router.get('/messages', (req, res) => {
 router.get('/messages/:id', (req, res) => {
   Message.findByIdAndDelete(req.params.id,(err,docs)=>{
     if (docs) {
-      return res.redirect('http://localhost:3000/admin')
+      return res.redirect('/admin')
     }
     else {
-      return res.redirect('http://localhost:3000/admin')
+      return res.redirect('/admin')
     }
   })
 })
