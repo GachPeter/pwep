@@ -7,7 +7,7 @@ router.use(upload())
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-  post.find({},null,{sort:{ st: 1 }},(err, docs) =>{
+  post.find({},(err, docs) =>{
     if (docs) {
       return res.json(docs);
     }
