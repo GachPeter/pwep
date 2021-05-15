@@ -34,7 +34,7 @@ function arrangeDocs(params) {
 
 
         if (post.show == 'off') {
-            document.getElementById("test").innerHTML = document.getElementById("test").innerHTML + "<div class='card'>  <div class='card-body'><div class='card-content'><h5 class='card-title'>" + post.title + "</h5><p class='card-text'>" + post.content + "</p></div><hr><a class='btn btn danger' href='http://localhost:3000/posts/delete/" + post.time + "'>Delete</a><div class='mb-1 text-muted'>" + pd + "</div></div></div></div></div></div>"
+            document.getElementById("test").innerHTML = document.getElementById("test").innerHTML + "<div class='card'>  <div class='card-body'><div class='card-content'><h5 class='card-title'>" + post.title + "</h5><p class='card-text'>" + post.content + "</p></div><hr><a class='btn btn danger' href='https://main-pwep-ldhnayhlcqhu1y2u-gtw.qovery.io/posts/delete/" + post.time + "'>Delete</a><div class='mb-1 text-muted'>" + pd + "</div></div></div></div></div></div>"
 
         }
         else if (post.show == 'on') {
@@ -68,7 +68,7 @@ function Message() {
 }
 function arrangeMess(params) {
     params.forEach(message => {
-        document.getElementById('mess').innerHTML = document.getElementById('mess').innerHTML + `<details><summary><h5>${message.subject} (${message.name})</h5></summary> ${message.email} > ${message.phone}<div class='card-footer'>${message.message}</div><hr/>>${message.time}<a href="/messages/${message._id}">Delete</a></details>`
+        document.getElementById('mess').innerHTML = document.getElementById('mess').innerHTML + `<details><summary><h5>${message.subject} (${message.name})</h5></summary> ${message.email} > ${message.phone}<div class='card-footer'>${message.message}</div><hr/>>${message.time}<a href="https://main-pwep-ldhnayhlcqhu1y2u-gtw.qovery.io//messages/${message._id}">Delete</a></details>`
     })
 }
 function formsub() {
@@ -76,7 +76,7 @@ function formsub() {
     dateObj = new Date();
     CD = dateObj.toDateString()
     objf.value = CD;
-}
+}evoxmusic
 
 function runst() {
     check = document.getElementById('check');
