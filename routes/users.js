@@ -57,8 +57,8 @@ router.post("/update/:time", (req, res) => {
   })
 })
 
-router.get("/delete/:time", (req, res) => {
-  post.findOneAndDelete({ time: req.params.time }, (err, docs) => {
+router.get("/delete/:id", (req, res) => {
+    post.findByIdAndDelete(req.params.id,(err,docs)=>{
     if (docs) {
       return res.redirect('https://main-pwep-ldhnayhlcqhu1y2u-gtw.qovery.io/admin')
     }
