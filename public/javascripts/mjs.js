@@ -24,7 +24,7 @@ function loadDoc() {
 
         }
     };
-    xhttp.open("GET", "http://localhost:3000/posts", true);
+    xhttp.open("GET", "https://main-pwep-ldhnayhlcqhu1y2u-gtw.qovery.io/posts", true);
     xhttp.send();
 }
 function arrangeDocs(params) {
@@ -38,7 +38,7 @@ function arrangeDocs(params) {
 
         }
         else if (post.show == 'on') {
-            document.getElementById("test").innerHTML = document.getElementById("test").innerHTML + "<div class='card my-5'><img src='http://localhost:3000/posts/uploads/" + post.img + "' alt='Inspire' class='img-fluid'> <div class='card-body'><h5 class='card-title'>" + post.title + "</h5><div class='card-content'>  <p class='card-text'>" + post.content + "</p></div><hr><div class='row'><div class='col-4'><a class='btn btn-danger' href='http://localhost:3000/posts/delete/" + post.time + "' type='button'>Delete</a></div><div class='col-6'><div class='mb-1 text-muted' style='position:absolute;right:1.5em'>" + pd + "</div><div></div></div></div>"
+            document.getElementById("test").innerHTML = document.getElementById("test").innerHTML + "<div class='card my-5'><img src='https://main-pwep-ldhnayhlcqhu1y2u-gtw.qovery.io/posts/uploads/" + post.img + "' alt='Inspire' class='img-fluid'> <div class='card-body'><h5 class='card-title'>" + post.title + "</h5><div class='card-content'>  <p class='card-text'>" + post.content + "</p></div><hr><div class='row'><div class='col-4'><a class='btn btn-danger' href='http://localhost:3000/posts/delete/" + post.time + "' type='button'>Delete</a></div><div class='col-6'><div class='mb-1 text-muted' style='position:absolute;right:1.5em'>" + pd + "</div><div></div></div></div>"
 
         }
     });
@@ -51,7 +51,7 @@ function loadDoc2() {
             document.getElementById("stats").innerHTML = JSON.parse(this.response);
         }
     };
-    xhttp.open("GET", "http://localhost:3000/posts/found", true);
+    xhttp.open("GET", "https://main-pwep-ldhnayhlcqhu1y2u-gtw.qovery.io/posts/found", true);
     xhttp.send();
 }
 function Message() {
@@ -63,7 +63,7 @@ function Message() {
             arrangeMess(messages);
         }
     };
-    xhttp.open("GET", "http://localhost:3000/messages", true);
+    xhttp.open("GET", "https://main-pwep-ldhnayhlcqhu1y2u-gtw.qovery.io/messages", true);
     xhttp.send();
 }
 function arrangeMess(params) {
