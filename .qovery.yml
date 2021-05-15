@@ -3,6 +3,7 @@ application:
   name: "pwep"
   project: "Pwep"
   organization: "QoveryCommunity"
+  port: "3000"
 databases:
 - type: "MONGODB"
   name: "pwep"
