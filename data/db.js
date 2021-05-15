@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const uri = "mongodb+srv://Gachp:005116011@cluster0.esvvm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const uri = 'mongodb://root:ExYysuc6EP5pkoIM@pwep-zykino7apsuwcsjd-svc.qovery.io:27017/admin';
 
 
 mongoose.connect(uri,{useNewUrlParser:true,useUnifiedTopology:true},(err)=>{
