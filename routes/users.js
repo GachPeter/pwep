@@ -49,10 +49,10 @@ router.post("/update/:time", (req, res) => {
     }
   }, (err, docs) => {
     if (docs) {
-      return res.redirect('http://localhost:3000/admin')
+      return res.redirect('https://main-pwep-ldhnayhlcqhu1y2u-gtw.qovery.io/admin')
     }
     else {
-      return res.redirect('http://localhost:3000/admin')
+      return res.redirect('https://main-pwep-ldhnayhlcqhu1y2u-gtw.qovery.io/admin')
     }
   })
 })
@@ -60,10 +60,10 @@ router.post("/update/:time", (req, res) => {
 router.get("/delete/:time", (req, res) => {
   post.findOneAndDelete({ time: req.params.time }, (err, docs) => {
     if (docs) {
-      return res.redirect('http://localhost:3000/admin')
+      return res.redirect('https://main-pwep-ldhnayhlcqhu1y2u-gtw.qovery.io/admin')
     }
     else {
-      return res.redirect('http://localhost:3000/admin')
+      return res.redirect('https://main-pwep-ldhnayhlcqhu1y2u-gtw.qovery.io/admin')
     }
   })
 })
@@ -71,10 +71,10 @@ router.get("/delete/:time", (req, res) => {
 router.get("/:category/delete", (req, res) => {
   post.deleteMany({ category: req.params.category }, (err, docs) => {
     if (docs) {
-      return res.redirect('http://localhost:3000/admin')
+      return res.redirect('https://main-pwep-ldhnayhlcqhu1y2u-gtw.qovery.io/admin')
     }
     else {
-      return res.redirect('http://localhost:3000/admin')
+      return res.redirect('https://main-pwep-ldhnayhlcqhu1y2u-gtw.qovery.io/admin')
     }
   })
 })
@@ -87,7 +87,7 @@ router.post('/feature', (req, res) => {
         res.send(err)
       }
       else {
-        res.redirect('/admin')
+        res.redirect('https://main-pwep-ldhnayhlcqhu1y2u-gtw.qovery.io/admin')
       }
     })
   }
@@ -110,7 +110,7 @@ router.post('/create', function (req, res) {
       st:Date.now()
     }, (err, docs) => {
       if (err) throw err;
-      else res.redirect('http://localhost:3000/admin')
+      else res.redirect('https://main-pwep-ldhnayhlcqhu1y2u-gtw.qovery.io/admin')
     })
   }
   else {
@@ -122,7 +122,7 @@ router.post('/create', function (req, res) {
       show: req.body.check
     }, (err, docs) => {
       if (err) throw err;
-      else res.redirect('http://localhost:3000/admin')
+      else res.redirect('https://main-pwep-ldhnayhlcqhu1y2u-gtw.qovery.io/admin')
     })
   }
 });
