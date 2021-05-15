@@ -80,8 +80,8 @@ router.get("/:category/delete", (req, res) => {
 })
 router.post('/feature', (req, res) => {
   if (req.files) {
-    imgfile = req.files.img;
-    filename = imgfile.name;
+    var imgfile = req.files.img;
+    var filename = imgfile.name;
     imgfile.mv(__dirname + '/uploads/' + filename, (err) => {
       if (err) {
         res.send(err)
