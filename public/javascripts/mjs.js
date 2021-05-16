@@ -73,10 +73,12 @@ function arrangeMess(params) {
 }
 function formsub() {
     var objf = document.getElementById('datep');
+     var img = document.getElementById('img');
+     var imgu = document.getElementById('imgu');
     dateObj = new Date();
     CD = dateObj.toDateString()
     objf.value = CD;
-}evoxmusic
+}
 
 function runst() {
     check = document.getElementById('check');
