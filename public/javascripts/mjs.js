@@ -73,8 +73,15 @@ function arrangeMess(params) {
 }
 function formsub() {
     var objf = document.getElementById('datep');
-     var img = document.getElementById('img');
-     var imgu = document.getElementById('imgu');
+     if (check.checked == true) {
+           var img = document.getElementById('img');
+           var imgu = document.getElementById('imgu');
+          result = img.value.split("/");
+          last = result.slice(-1)[0];
+          img.value = last;
+         alert(last);
+     }
+
     dateObj = new Date();
     CD = dateObj.toDateString()
     objf.value = CD;
