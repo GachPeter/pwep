@@ -68,7 +68,7 @@ function Message() {
 }
 function arrangeMess(params) {
     params.forEach(message => {
-        document.getElementById('mess').innerHTML = document.getElementById('mess').innerHTML + `<details><summary><h5>${message.subject} (${message.name})</h5></summary> ${message.email} > ${message.phone}<div class='card-footer'>${message.message}</div><hr/>>${message.time}<a href="https://main-pwep-ldhnayhlcqhu1y2u-gtw.qovery.io//messages/${message._id}">Delete</a></details>`
+        document.getElementById('mess').innerHTML = document.getElementById('mess').innerHTML + `<details><summary><h5>${message.subject} (${message.name})</h5></summary> ${message.email} > ${message.phone}<div class='card-footer'>${message.message}</div><hr/>>${message.time}<a href="https://main-pwep-ldhnayhlcqhu1y2u-gtw.qovery.io/messages/${message._id}">Delete</a></details>`
     })
 }
 function formsub() {
