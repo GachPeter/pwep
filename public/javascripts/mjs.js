@@ -1,6 +1,5 @@
     loadDoc();
-    loadDoc2();
-    Message();
+   Message();
     runst()
 
    
@@ -43,17 +42,7 @@ function arrangeDocs(params) {
         }
     });
 }
-function loadDoc2() {
-    var xhttp = new XMLHttpRequest();
 
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("stats").innerHTML = JSON.parse(this.response);
-        }
-    };
-    xhttp.open("GET", "https://main-pwep-ldhnayhlcqhu1y2u-gtw.qovery.io/posts/found", true);
-    xhttp.send();
-}
 function Message() {
     var xhttp = new XMLHttpRequest();
 
