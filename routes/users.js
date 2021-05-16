@@ -92,9 +92,6 @@ router.post('/feature', (req, res) => {
     })
   }
 })
-router.get('/found', (req, res) => {
-  res.json(filename);
-});
 router.get('/uploads/:opt', (req, res) => {
   res.sendFile(__dirname + '/uploads/' + req.params.opt);
 })
