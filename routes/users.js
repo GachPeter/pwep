@@ -97,12 +97,12 @@ router.get('/uploads/:opt', (req, res) => {
 })
 router.post('/create', function (req, res) {
   console.log(req.body);
-  if (req.body.check) {
+  if (req.body.img) {
     post.create({
       title: req.body.title,
       content: req.body.contents,
       time: req.body.datep,
-      img: imgfile.name,
+      img: req.body.img,
       show: req.body.check,
       st:Date.now()
     }, (err, docs) => {
