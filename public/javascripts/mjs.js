@@ -61,6 +61,9 @@ function arrangeMess(params) {
     })
 }
 function formsub() {
+     check = document.getElementById('check');
+
+
     var objf = document.getElementById('datep');
      if (check.checked == true) {
            var img = document.getElementById('img');
