@@ -68,7 +68,7 @@ function formsub() {
      if (check.checked == true) {
            var img = document.getElementById('img');
            var imgu = document.getElementById('imgu');
-          result = img.value.split("/");
+          result = imgu.value.split("/");
           last = result.slice(-1)[0];
           img.value = last;
          alert(last);
