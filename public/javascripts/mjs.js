@@ -33,7 +33,7 @@ function arrangeDocs(params) {
 
 
         if (post.show == 'off') {
-            document.getElementById("test").innerHTML = document.getElementById("test").innerHTML + "<div class='card'>  <div class='card-body'><div class='card-content'><h5 class='card-title'>" + post.title + "</h5><p class='card-text'>" + post.content + "</p></div><hr><a class='btn btn danger' href='https://main-pwep-ldhnayhlcqhu1y2u-gtw.qovery.io/posts/delete/" + post._id + "'>Delete</a><div class='mb-1 text-muted'>" + pd + "</div></div></div></div></div></div>"
+            document.getElementById("test").innerHTML = document.getElementById("test").innerHTML + "<div class='card my-5'>  <div class='card-body'><div class='card-content'><h5 class='card-title'>" + post.title + "</h5><p class='card-text'>" + post.content + "</p></div><hr><a class='btn btn danger' href='https://main-pwep-ldhnayhlcqhu1y2u-gtw.qovery.io/posts/delete/" + post._id + "'>Delete</a><div class='mb-1 text-muted'>" + pd + "</div></div></div></div></div></div>"
 
         }
         else if (post.show == 'on') {
