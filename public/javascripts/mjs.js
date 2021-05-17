@@ -66,8 +66,8 @@ function formsub() {
 
     var objf = document.getElementById('datep');
      if (check.checked == true) {
-           var img = document.getElementById('img');
-           var imgu = document.getElementById('imgu');
+           img = document.getElementById('img');
+           imgu = document.getElementById('imgu');
          alert(img.value)
           result = imgu.value.split("/");
          alert(result);
