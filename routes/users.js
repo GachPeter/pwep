@@ -82,6 +82,7 @@ router.post('/feature', (req, res) => {
   if (req.files) {
     imgfile = req.files.imgu;
     filename = imgfile.name;
+    temp = filename;
     imgfile.mv(__dirname + '/uploads/' + filename, (err) => {
       if (err) {
         res.send(err)
@@ -102,7 +103,7 @@ router.post('/create', function (req, res) {
       title: req.body.title,
       content: req.body.contents,
       time: req.body.datep,
-      img: req.body.img,
+      img: temp,
       show: req.body.check,
       st:Date.now()
     }, (err, docs) => {
