@@ -98,7 +98,7 @@ router.get('/uploads/:opt', (req, res) => {
 })
 router.post('/create', function (req, res) {
   console.log(req.body);
-  if (req.body.show =='on') {
+  if (req.body.check =='on') {
     post.create({
       title: req.body.title,
       content: req.body.contents,
