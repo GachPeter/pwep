@@ -66,15 +66,11 @@ function formsub() {
 
     var objf = document.getElementById('datep');
      if (check.checked == true) {
-         alert('hello first');
-           img = document.getElementById('img');
-           imgu = document.getElementById('imgu');
-         alert(imgu.value)
+          img = document.getElementById('img');
+          imgu = document.getElementById('imgu');
           result = imgu.value.split("/");
-         alert(result);
           last = result.slice(-1)[0];
           img.value = last;
-         alert(last);
      }
 
     dateObj = new Date();
