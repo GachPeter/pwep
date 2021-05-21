@@ -10,19 +10,18 @@ var myerr = '';
 router.use(session({
     secret: 'ssssh its secret',
     resave: false,
-    saveUninitialized: true,
-    cookie: { maxAge: 600000 }
+    saveUninitialized: true
   }));  
 redirectLogin = function(req,res,next){
      if(!req.session.isadmin){
-         res.redirect("/admin/login");
+        return res.redirect("/admin/login");
      }
      next()
 }
 
 redirectHome = function(req,res,next){
     if(req.session.isadmin){
-        res.redirect("/admin")
+        return res.redirect("/admin")
     }
     next()
 }
@@ -97,7 +96,7 @@ router.get('/login',redirectHome,(req,res)=>{
     )
 });
 
-router.post('/login',redirectHome,(req,res)=>{
+router.post('/login',redirectLogin,(req,res)=>{
     var {email,password} = req.body;
     if(email&&password){
         if(email="AjangAdmin@pwep.org"){
@@ -126,7 +125,7 @@ router.post('/login',redirectHome,(req,res)=>{
     }
 })
 
-router.get('/logout',(req,res)=>{
+router.get('/logout',redirect(req,res)=>{
     req.session.destroy((err)=>{
         if(!err){
             res.redirect('/admin/login')
