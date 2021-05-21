@@ -125,7 +125,7 @@ router.post('/login',redirectLogin,(req,res)=>{
     }
 })
 
-router.get('/logout',redirect(req,res)=>{
+router.get('/logout',redirectHome(req,res)=>{
     req.session.destroy((err)=>{
         if(!err){
             res.redirect('/admin/login')
