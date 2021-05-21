@@ -14,14 +14,14 @@ router.use(session({
   }));  
 redirectLogin = function(req,res,next){
      if(!req.session.isadmin){
-        return res.redirect("/admin/login");
+        res.redirect("/admin/login");
      }
      next()
 }
 
 redirectHome = function(req,res,next){
     if(req.session.isadmin){
-        return res.redirect("/admin")
+        res.redirect("/admin")
     }
     next()
 }
