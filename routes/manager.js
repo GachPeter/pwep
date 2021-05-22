@@ -11,8 +11,8 @@ var myerr = '';
 router.use(session({
     secret: 'ssssh its secret',
     resave: false,
-    saveUninitialized: true,
-    cookie: { maxAge: 600000 }
+    saveUninitialized: true
+
   }));  
 redirectLogin = function(req,res,next){
      if(!req.session.isadmin){
