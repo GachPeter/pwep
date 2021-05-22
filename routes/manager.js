@@ -15,6 +15,7 @@ router.use(session({
 redirectLogin = function(req,res,next){
      if(!req.session.isadmin){
         res.redirect("/admin/login");
+         console.log('invalid session');
      }
      next()
 }
