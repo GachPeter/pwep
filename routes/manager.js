@@ -1,6 +1,7 @@
 const { request } = require('express');
 var express = require('express');
 var router = express.Router();
+var MongoStore = require('mongo-store');
 var session = require('express-session');
 
 var myerr = '';
@@ -10,7 +11,9 @@ var myerr = '';
 router.use(session({
     secret: 'ssssh its secret',
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: true,
+    store: MongoStore.create({
+    mongoUrl: 'mongodb://root:ExYysuc6EP5pkoIM@pwep-zykino7apsuwcsjd-svc.qovery.io:27017/admin'})
   }));  
 redirectLogin = function(req,res,next){
      if(!req.session.isadmin){
