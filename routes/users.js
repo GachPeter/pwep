@@ -2,7 +2,9 @@ var express = require('express');
 var router = express.Router();
 var post = require('./model/post');
 var upload = require("express-fileupload");
+var cors = require("cors");
 
+router.use(cors())
 router.use(upload())
 
 /* GET users listing. */
