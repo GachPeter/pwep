@@ -7,6 +7,7 @@ var session = require('express-session');
 var myerr = '';
 
 /* GET home page. */
+router.use(cors())
 
 router.use(session({
     secret: 'ssssh its secret',
