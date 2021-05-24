@@ -13,7 +13,12 @@ router.use(cors())
 router.use(session({
     secret: 'ssssh its secret',
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: true,  store: MongoStore.create({
+    mongoUrl:  store: MongoStore.create({
+    mongoUrl: 'mongodb://user12345:foobar@localhost/test-app?authSource=admin&w=1'
+  }),
+    mongoOptions: advancedOptions // See below for details
+  })
 
   }));  
 redirectLogin = function(req,res,next){
