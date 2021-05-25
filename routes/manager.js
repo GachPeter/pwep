@@ -4,7 +4,7 @@ var express = require('express');
 var router = express.Router();
 var session = require('express-session');
 var cors = require("cors");
-var MongoStore = require('mongo-store');
+var MongoStore = require('connect-mongo');
 
 var myerr = '';
 
