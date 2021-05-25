@@ -13,32 +13,27 @@ router.use(cors())
 router.use(session({
     secret: 'ssssh its secret',
     resave: false,
-    saveUninitialized: true,  store: MongoStore.create({
-    mongoUrl:  store: MongoStore.create({
-    mongoUrl: 'mongodb://user12345:foobar@localhost/test-app?authSource=admin&w=1'
-  }),
-    mongoOptions: advancedOptions // See below for details
-  })
-
-  }));  
-redirectLogin = function(req,res,next){
-     if(!req.session.isadmin){
-         res.redirect("/admin/login");
-     }
-     next()
+    saveUninitialized: true, 
+    store: MongoStore.create({ mongoUrl: 'mongodb://user12345:foobar@localhost/test-app?authSource=admin&w=1'})
+}));
+redirectLogin = function (req, res, next) {
+    if (!req.session.isadmin) {
+        res.redirect("/admin/login");
+    }
+    next()
 }
 
-redirectHome = function(req,res,next){
-    if(req.session.isadmin){
+redirectHome = function (req, res, next) {
+    if (req.session.isadmin) {
         res.redirect("/admin")
     }
     next()
 }
-router.get('/',redirectLogin, function(req, res, next) {
-  res.sendFile(__dirname+'/admin.html');
+router.get('/', redirectLogin, function (req, res, next) {
+    res.sendFile(__dirname + '/admin.html');
 });
 
-router.get('/login',redirectHome,(req,res)=>{
+router.get('/login', redirectHome, (req, res) => {
     res.send(
         `
         <section>
@@ -105,41 +100,41 @@ router.get('/login',redirectHome,(req,res)=>{
     )
 });
 
-router.post('/login',redirectHome,(req,res)=>{
-    var {email,password} = req.body;
-    if(email&&password){
-        if(email="AjangAdmin@pwep.org"){
-            if(password=="Widowsprogramme1"){
+router.post('/login', redirectHome, (req, res) => {
+    var { email, password } = req.body;
+    if (email && password) {
+        if (email = "AjangAdmin@pwep.org") {
+            if (password == "Widowsprogramme1") {
                 req.session.isadmin = 'aj';
                 console.log(req.session)
                 return res.redirect("/admin");
             }
-            else{
+            else {
                 myerr = "incorrect password";
-               
+
                 return res.redirect("/admin/login");
-              
+
             }
-            return           
+            return
         }
-        else{
+        else {
             myerr = "incorrect email";
             return res.redirect("/admin/login");
         }
         return
     }
-    else{
-     myerr = "enter all the fields";
-     return res.redirect("/admin/login");
+    else {
+        myerr = "enter all the fields";
+        return res.redirect("/admin/login");
     }
 })
 
-router.get('/logout',(req,res)=>{
-    req.session.destroy((err)=>{
-        if(!err){
+router.get('/logout', (req, res) => {
+    req.session.destroy((err) => {
+        if (!err) {
             res.redirect('/admin/login')
         }
     })
 })
-module.exports = router;     
+module.exports = router;
 
