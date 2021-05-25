@@ -14,7 +14,6 @@ router.use(cors())
 router.use(session({
     secret: 'ssssh its secret',
     resave: false,
-<<<<<<< HEAD
     saveUninitialized: true, 
     store: MongoStore.create({ mongoUrl: 'mongodb://user12345:foobar@localhost/test-app?authSource=admin&w=1'})
 }));
@@ -23,18 +22,12 @@ redirectLogin = function (req, res, next) {
         res.redirect("/admin/login");
     }
     next()
-=======
-    saveUninitialized: true,  
-    store: MongoStore.create({
-    mongoUrl: 'mongodb://root:ExYysuc6EP5pkoIM@pwep-zykino7apsuwcsjd-svc.qovery.io:27017/admin'
-    })
-}));  
+}
 redirectLogin = function(req,res,next){
      if(!req.session.isadmin){
          res.redirect("/admin/login");
      }
      next()
->>>>>>> ad9a9a9ed84b74f55b9e043e7bfc440f96c25776
 }
 
 redirectHome = function (req, res, next) {
