@@ -15,7 +15,7 @@ router.use(session({
     resave: false,
     saveUninitialized: true,  store: MongoStore.create({
 
-    mongoUrl: 'mongodb://user12345:foobar@localhost/test-app?authSource=admin&w=1'
+    mongoUrl: 'mongodb://root:ExYysuc6EP5pkoIM@pwep-zykino7apsuwcsjd-svc.qovery.io:27017/admin'
   })
 
 
