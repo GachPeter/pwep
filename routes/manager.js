@@ -13,13 +13,11 @@ router.use(cors())
 router.use(session({
     secret: 'ssssh its secret',
     resave: false,
-    saveUninitialized: true,  store: MongoStore.create({
-
+    saveUninitialized: true,  
+    store: MongoStore.create({
     mongoUrl: 'mongodb://root:ExYysuc6EP5pkoIM@pwep-zykino7apsuwcsjd-svc.qovery.io:27017/admin'
-  })
-
-
-  }));  
+    })
+}));  
 redirectLogin = function(req,res,next){
      if(!req.session.isadmin){
          res.redirect("/admin/login");
